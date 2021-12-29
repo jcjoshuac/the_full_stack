@@ -67,7 +67,7 @@ const requestedPostId = req.params.postId;
 app.get("/subject/:requestedSubject", function(req, res){
 
 const requestedSubject = req.params.requestedSubject;
-const capitalizedSubject = _.capitalize(requestedSubject)
+const capitalizedSubject = _.capitalize(requestedSubject);
 
   Post.find({subject: capitalizedSubject}, function(err, posts){
     res.render("subject", {
