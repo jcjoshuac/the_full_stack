@@ -1,0 +1,19 @@
+
+<%- include("partials/header"); -%>
+
+    <h1><%=capitalizedSubject%> articles</h1>
+    <p>Welcome to The Full Stack, a multidisciplinary blog. All our <%=requestedSubject%> articles can be found on this page.</p>
+
+  <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
